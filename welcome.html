@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .text-title {
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .text-subtitle {
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            margin: 40px 0;
+        }
+
+        .screenshot {
+            width: 100%;
+            max-width: 700px;
+            height: 300px;
+            background-color: #f0f0f0;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .screenshot::after {
+            content: "Screenshot placeholder";
+            color: #666;
+        }
+
+        .welcome-image {
+            max-width: 700px;
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-title">Simple Sticky Notes Installed</h1>
+
+    <div class="text-subtitle">
+        Right-click anywhere on the page where you want to place a note. In the context menu, click "Pin note here" (1)
+    </div>
+
+    <div>
+        <img src="assets/welcome-1.png" alt="Chrome extension quickstart guide" class="welcome-image">
+    </div>
+
+    <div class="text-subtitle">
+        Open the extension (3) on any page to start using Simple Sticky Notes:
+    </div>
+
+    <div class="screenshot"></div>
+</body>
+
+</html>
