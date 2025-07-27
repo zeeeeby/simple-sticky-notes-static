@@ -23,7 +23,6 @@
 
         .text-subtitle {
             font-size: 22px;
-            margin: 40px 0;
         }
 
         .screenshot {
@@ -50,6 +49,10 @@
             border-radius: 8px;
             border: 1px solid #ddd;
         }
+
+        .img-container {
+            margin: 20px auto;
+        }
     </style>
 </head>
 
@@ -57,14 +60,16 @@
     <h1 class="text-title">Simple Sticky Notes Installed</h1>
 
     <div class="text-subtitle">
-        Right-click to open the context menu, then click "<b>Pin note here</b>"<br>
-        <span style="font-size:0.93em">
-            or just press <span id="main_shortcut">Alt+S (⌥S on Mac)</span>:
-        </span>
+        Right-click to open the context menu, then click "<b>Pin note here</b>":
     </div>
 
-    <div>
+    <div class="img-container">
         <img src="assets/welcome-1.png" alt="Chrome extension quickstart guide" class="welcome-image">
+    </div>
+    <div>
+        <span class="text-subtitle">
+            or just press <span id="main_shortcut">Alt+S (⌥S on Mac)</span>
+        </span>
     </div>
 
 </body>
