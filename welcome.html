@@ -64,7 +64,7 @@
     </div>
 
     <div class="img-container">
-        <img src="assets/welcome-1.png" alt="Chrome extension quickstart guide" class="welcome-image">
+        <img id="welcome-image" src="assets/welcome-1.png" alt="Chrome extension quickstart guide" class="welcome-image">
     </div>
     <div>
         <span class="text-subtitle">
@@ -86,6 +86,11 @@
                 const key = element.getAttribute('data-i18n');
                 element.innerHTML = texts[key];
             });
+
+            if (lang === 'ru') {
+                const welcomeImage = document.getElementById('welcome-image');
+                welcomeImage.src = `assets/welcome-1-ru.png`;
+            }
         }
 
         document.addEventListener('DOMContentLoaded', loadTranslations);
