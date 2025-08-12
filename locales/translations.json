@@ -1,0 +1,16 @@
+{
+  "en": {
+    "installed": "Simple Sticky Notes Installed",
+    "context_menu": "Right-click to open the context menu, then click <b>Add note here</b>:",
+    "or_press": "Or press",
+    "to_create": "to create a new note.",
+    "mac_shortcut": "on Mac"
+  },
+  "ru": {
+    "installed": "Приложение Simple Sticky Notes установлено",
+    "context_menu": "Нажмите ПКМ, чтобы открыть контекстное меню, затем нажмите <b>Add note here</b>:",
+    "or_press": "Или используйте сочетание клавиш",
+    "to_create": "чтобы создать новую заметку.",
+    "mac_shortcut": "на Mac"
+  }
+}

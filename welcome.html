@@ -58,10 +58,9 @@
 </head>
 
 <body>
-    <h1 class="text-title">Simple Sticky Notes Installed</h1>
+    <h1 class="text-title" data-i18n="installed"></h1>
 
-    <div class="text-subtitle">
-        Right-click to open the context menu, then click <b>Add note here</b>:
+    <div class="text-subtitle" data-i18n="context_menu">
     </div>
 
     <div class="img-container">
@@ -69,10 +68,28 @@
     </div>
     <div>
         <span class="text-subtitle">
-            Or press <b><span id="main_shortcut">Alt+⇧+S (⌥⇧S on Mac)</span></b> to create a new note.
+            <span data-i18n="or_press"></span>
+            <span>
+                <b><span id="main_shortcut">Alt+⇧+N (⌥⇧N <span data-i18n="mac_shortcut">на Mac</span>)</span></b>
+            </span>
+            <span data-i18n="to_create"></span>
         </span>
     </div>
+    <script>
+        async function loadTranslations() {
+            const translations = await fetch('locales/translations.json').then(r => r.json());
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en';
+            const texts = translations[lang] || translations['en'];
 
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.innerHTML = texts[key];
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadTranslations);
+    </script>
 </body>
 
 </html>
