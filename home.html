@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Sticky Notes for Chrome</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafb;
+            margin: 0;
+            color: #232323;
+        }
+
+        .box {
+            max-width: 420px;
+            background: #fff;
+            margin: 4% auto;
+            border-radius: 9px;
+            box-shadow: 0 2px 8px #0001;
+            padding: 2em 1em;
+            text-align: center;
+        }
+
+        h1 {
+            color: black;
+            font-size: 1.6em;
+            margin-bottom: 0.7em;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        a.btn {
+            margin: 0 auto;
+            display: flex;
+            width: max-content;
+            justify-content: center;
+            gap: 4px;
+            padding: 1em 2em;
+            margin-bottom: 1.6em;
+            background: #2979ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.02em;
+            font-weight: bold;
+        }
+
+        ul {
+            text-align: left;
+            padding-left: 20px;
+            margin: 0.7em 0 1em 10px;
+        }
+
+        small {
+            opacity: 0.8;
+            font-size: 0.98em;
+            display: block;
+            margin: 2em 0 0 0;
+            color: #888;
+        }
+        .privacy {
+            margin-right: 1em;
+        }
+
+
+
+        @media (max-width:600px) {
+            .box {
+                padding: 1em 0.1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Simple Sticky Notes</h1>
+        <div class="btn-container">
+            <a class="btn" href="https://chromewebstore.google.com/detail/lkkkngnoflaeicokibjcmgjacmhlnghg" target="_blank">
+                <img src="https://static.chrome-stats.com/icons/chrome.svg" width="20"></img> Add to Chrome
+            </a>
+        </div>
+        <ul>
+            <li>Handy sticky notes on any page</li>
+            <li>No ads</li>
+            <li>Optional sync across devices</li>
+        </ul>
+        <div class="data">
+            <b>Data &amp; Privacy:</b>
+            <ul>
+                <li>Notes stored locally by default</li>
+                <li>Optional Cloud sync (Google Drive) is available</li>
+                <li>No tracking or data selling</li>
+            </ul>            
+        </div>
+        <a class="privacy" href="/legal/privacy.html" target="_blank">Privacy Policy</a>
+
+         <a href="/legal/privacy.html" target="_blank">Terms of Service</a>
+        <small>Have questions? <a href="mailto:dmi.build1@gmail.com">Contact us</a>
+
+        </small>
+    </div>
+</body>
+
+</html>
