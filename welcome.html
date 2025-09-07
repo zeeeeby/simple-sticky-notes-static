@@ -52,7 +52,56 @@
         }
 
         .img-container {
+            width: max-content;
             margin: 20px auto;
+        }
+
+        .instruction_container {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .code_with_icon {
+            display: inline-flex;
+            align-items: center;
+            flex-direction: row;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            padding: 2px 6px;
+            gap: 6px;
+        }
+
+        .code_with_icon svg,
+        .code_with_icon img {
+            width: 15px;
+            height: 15px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+
+        .hotkey_link {
+            padding: 6px 10px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .hotkey_link:hover {
+            background-color: #357abd;
+        }
+
+        .hotkey_link:active {
+            background-color: #2b62a1;
         }
     </style>
 </head>
@@ -60,19 +109,36 @@
 <body>
     <h1 class="text-title" data-i18n="installed"></h1>
 
-    <div class="text-subtitle" data-i18n="context_menu">
+    <div class="instruction_container">
+        <div class="text-subtitle">
+            <span class="" data-i18n="context_menu">
+            </span>
+            <span class="code_with_icon">
+                <img src="assets/icon.svg" alt="Manager icon" style="transform: scale(1.5)">
+                <span data-i18n="context_menu_btn"></span>
+            </span>
+            <span>:</span>
+        </div>
+
     </div>
 
     <div class="img-container">
-        <img id="welcome-image" src="assets/welcome-1.png" alt="Chrome extension quickstart guide" class="welcome-image">
+        <img id="welcome-image" src="assets/welcome-1.png" alt="Chrome extension quickstart guide"
+            class="welcome-image">
     </div>
-    <div>
+    <div class="instruction_container">
         <span class="text-subtitle">
             <span data-i18n="or_press"></span>
-            <span>
-                <b><span id="main_shortcut">Alt+⇧+N (⌥⇧N <span data-i18n="mac_shortcut">на Mac</span>)</span></b>
+            <span class="main_shortcut">
+                <span class="code_with_icon">Alt+Shift+N</span>
+                <span>(</span>
+                <span class="code_with_icon">⌥⇧N</span>
+                <span data-i18n="mac_shortcut"></span>
+                <span>)</span>
             </span>
             <span data-i18n="to_create"></span>
+            <span data-i18n="hotkey_customize" class="hidden"></span>
+            <button class="hotkey_link hidden" data-i18n="hotkey_link"></button>
         </span>
     </div>
     <script>
